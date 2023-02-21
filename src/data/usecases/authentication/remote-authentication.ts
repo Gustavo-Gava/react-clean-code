@@ -1,7 +1,7 @@
-import { HttpPostClient } from "../../protocols/http/http-post-client";
+import type { HttpPostClient } from '../../protocols/http/http-post-client'
 
 export class RemoteAuthentication {
-  constructor (
+  constructor(
     private readonly url: string,
     private readonly httpPostClient: HttpPostClient
   ) {}
