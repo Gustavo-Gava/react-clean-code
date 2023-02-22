@@ -1,6 +1,8 @@
 import { HttpPostClientSpy } from '../../test/mock-http-client'
 import { RemoteAuthentication } from './remote-authentication'
 
+import { randEmail } from '@ngneat/falso'
+
 // SUT = System Under Test
 
 type SutTypes = {
@@ -8,7 +10,7 @@ type SutTypes = {
   httpPostClientSpy: HttpPostClientSpy
 }
 
-const makeSut = (url: string = 'http://any-url.com'): SutTypes => {
+const makeSut = (url: string = randEmail()): SutTypes => {
   const httpPostClientSpy = new HttpPostClientSpy()
   const sut = new RemoteAuthentication(url, httpPostClientSpy)
 
@@ -20,7 +22,7 @@ const makeSut = (url: string = 'http://any-url.com'): SutTypes => {
 
 describe('Remote Authentication', () => {
   test('Should call HttpPostClient with correct URL', async () => {
-    const url = 'http://other-url.com'
+    const url = randEmail()
     const { httpPostClientSpy, sut } = makeSut(url)
     await sut.auth()
 
