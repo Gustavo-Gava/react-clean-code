@@ -3,6 +3,10 @@
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["jest", "node"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
