@@ -102,6 +102,14 @@ describe('Remote Authentication', () => {
     await expect(promise).rejects.toThrow(new UnexpectedError())
   })
 
+  test('Should throw UnexpectedError if HttpPostClient returns 200 with null body', async () => {
+    const authenticationParams = mockAuthentication()
+    const { sut } = makeSut()
+    const promise = sut.auth(authenticationParams)
+
+    await expect(promise).rejects.toThrow(new UnexpectedError())
+  })
+
   test('Should return an AccountModel if HttpPostClient returns 200', async () => {
     const authenticationParams = mockAuthentication()
     const httpResult = mockAccountModel()
