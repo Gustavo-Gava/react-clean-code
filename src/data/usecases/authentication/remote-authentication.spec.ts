@@ -6,15 +6,20 @@ import { InvalidCredentialsError } from '@/domain/errors/invalid-credentials-err
 
 import { randEmail, randUrl } from '@ngneat/falso'
 import { UnexpectedError } from '@/domain/errors/unexpected-error'
+import { type AccountModel } from '@/domain/models/account-model'
+import { type AuthenticationParams } from '@/domain/usecases/authentication'
 
 // SUT = System Under Test
 type SutTypes = {
   sut: RemoteAuthentication
-  httpPostClientSpy: HttpPostClientSpy
+  httpPostClientSpy: HttpPostClientSpy<AuthenticationParams, AccountModel>
 }
 
 const makeSut = (url: string = randEmail()): SutTypes => {
-  const httpPostClientSpy = new HttpPostClientSpy()
+  const httpPostClientSpy = new HttpPostClientSpy<
+    AuthenticationParams,
+    AccountModel
+  >()
   const sut = new RemoteAuthentication(url, httpPostClientSpy)
 
   return {
@@ -84,5 +89,3 @@ describe('Remote Authentication', () => {
     await expect(promise).rejects.toThrow(new UnexpectedError())
   })
 })
-
-export {}
