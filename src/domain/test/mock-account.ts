@@ -1,6 +1,7 @@
-import { randEmail, randPassword, randUuid } from '@ngneat/falso'
-import { type AccountModel } from '../models/account-model'
+import { type AccountModel } from '../models'
 import { type AuthenticationParams } from '../usecases/authentication'
+
+import { randEmail, randPassword, randUuid } from '@ngneat/falso'
 
 export const mockAuthentication = (): AuthenticationParams => ({
   email: randEmail(),
