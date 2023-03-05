@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "env": {
     "browser": true,
     "es2021": true
@@ -27,6 +32,8 @@
       "warn",
       {"extensions": [".js", ".jsx"]}
     ],
+    "react/jxs-uses-react": "error",
+    "react/react-uses-vars": "error",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/return-await": "off",
     "import/prefer-default-export": "off",
