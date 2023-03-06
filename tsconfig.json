@@ -16,5 +16,10 @@
     "isolatedModules": true,
     "jsx": "react"
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+    ]
+  },
   "include": ["src"]
 }
