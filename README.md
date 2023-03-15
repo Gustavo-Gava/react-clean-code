@@ -2,22 +2,19 @@
   <img src="https://user-images.githubusercontent.com/77810817/220598837-8095017f-5a44-492f-93ae-e36525a63d38.png" width="200" />
 </h1>
 
-
-
 <h4 align="center"/> Login </p>
 
 ![image](https://reactjs.org/logo-og.png)
-
 
 ## 📋 Tabela de conteúdos
 
 <!--ts-->
 
-* [Sobre](#sobre)
-* [Funcionalidades](#funcionalidades)
-* [Pre Requisitos](#requisitos)
-* [Como usar](#como-usar)
-* [Tecnologias](#tecnologias)
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Pre Requisitos](#requisitos)
+- [Como usar](#como-usar)
+- [Tecnologias](#tecnologias)
 
 <!--te-->
 
@@ -45,31 +42,31 @@ Também foi usado o React Query para podermos colocar os dados do usuário em ca
 
 <h3 id="tecnologias"> 📚 Tecnologias </h3>
 
-* React
-* Typescript
-* Next.js
-* ChakraUI
-* React Query
-* Miragejs
+- React
+- Typescript
+- Next.js
+- ChakraUI
+- React Query
+- Miragejs
 
-<h3 id="requisitos">🔧 Pré Requisitos</h3> 
+<h3 id="requisitos">🔧 Pré Requisitos</h3>
 
- * [Git](https://git-scm.com)
- * [Yarn](https://yarnpkg.com)
- * Editor de código de sua preferência.
+- [Git](https://git-scm.com)
+- [Yarn](https://yarnpkg.com)
+- Editor de código de sua preferência.
 
-<h3 id="como-usar">💻 Como usar</h3> 
+<h3 id="como-usar">💻 Como usar</h3>
 
 ```
-  # Clone esse projeto 
+  # Clone esse projeto
   $ git clone 'https://github.com/Gustavo-Gava/dashgo'
-  
+
   # Navegue até a pasta do projeto
   $ cd ./dashgo
-  
+
   # Instale as dependências
   $ yarn
-  
+
   # Rode o projeto
   $ yarn dev
 
