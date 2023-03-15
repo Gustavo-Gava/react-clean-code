@@ -19,7 +19,8 @@
     "ecmaVersion": "latest",
     "sourceType": "module",
     "requireConfigFile": false,
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".css"]
   },
   "plugins": ["react", "prettier"],
   "rules": {
