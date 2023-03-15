@@ -1,6 +1,6 @@
 module.exports = {
   roots: ['<rootDir>/src'],
-  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}', '!**/*.d.ts'],
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',
   transform: {
@@ -9,5 +9,5 @@ module.exports = {
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
   },
-  transformIgnorePatterns: ["node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"]
+  transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
 }

@@ -1,3 +1,4 @@
+import { Footer } from '@/presentation/components/Footer'
 import { LoginHeader } from '@/presentation/components/LoginHeader'
 import { Button } from '@/presentation/components/ui/Button'
 import { Input } from '@/presentation/components/ui/Input'
@@ -21,7 +22,7 @@ const Login = () => {
         </span>
       </form>
 
-      <footer className='h-12 bg-primary' />
+      <Footer />
     </div>
   )
 }

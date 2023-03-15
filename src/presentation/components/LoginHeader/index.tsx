@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import { Logo } from '../ui/Logo'
 
-export function LoginHeader() {
+function LoginHeaderComponent() {
   return (
     <header className='flex flex-col items-center gap-4 bg-primary py-10'>
       <Logo />
@@ -9,3 +10,6 @@ export function LoginHeader() {
     </header>
   )
 }
+
+const LoginHeader = memo(LoginHeaderComponent)
+export { LoginHeader }
