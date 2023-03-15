@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { type ButtonHTMLAttributes, type ReactNode } from 'react'
 import { LoadingRing } from '../LoadingRing'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
