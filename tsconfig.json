@@ -14,12 +14,11 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react"
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true
   },
   "jest": {
-    "transformIgnorePatterns": [
-      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
-    ]
+    "transformIgnorePatterns": ["node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"]
   },
   "include": ["src"]
 }
