@@ -4,6 +4,7 @@ module.exports = {
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',
   transform: {
+    '^.+\\.jsx?$': 'babel-jest',
     '.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleNameMapper: {

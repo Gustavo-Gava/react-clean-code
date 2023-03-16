@@ -6,7 +6,7 @@ import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors'
 import { type AccountModel } from '@/domain/models'
 import { type AuthenticationParams } from '@/domain/usecases'
 
-import { randEmail, randUrl } from '@ngneat/falso'
+import { faker } from '@faker-js/faker'
 
 // SUT = System Under Test
 type SutTypes = {
@@ -14,7 +14,7 @@ type SutTypes = {
   httpPostClientSpy: HttpPostClientSpy<AuthenticationParams, AccountModel>
 }
 
-const makeSut = (url: string = randEmail()): SutTypes => {
+const makeSut = (url: string = faker.internet.url()): SutTypes => {
   const httpPostClientSpy = new HttpPostClientSpy<
     AuthenticationParams,
     AccountModel
@@ -29,7 +29,7 @@ const makeSut = (url: string = randEmail()): SutTypes => {
 
 describe('Remote Authentication', () => {
   test('Should call HttpPostClient with correct URL', async () => {
-    const url = randUrl()
+    const url = faker.internet.url()
     const httpResult = mockAccountModel()
     const { httpPostClientSpy, sut } = makeSut(url)
     httpPostClientSpy.response = {

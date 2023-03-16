@@ -1,13 +1,13 @@
 import { type AccountModel } from '../models'
 import { type AuthenticationParams } from '../usecases/authentication'
 
-import { randEmail, randPassword, randUuid } from '@ngneat/falso'
+import { faker } from '@faker-js/faker'
 
 export const mockAuthentication = (): AuthenticationParams => ({
-  email: randEmail(),
-  password: randPassword(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
 })
 
 export const mockAccountModel = (): AccountModel => ({
-  accessToken: randUuid(),
+  accessToken: faker.datatype.uuid(),
 })

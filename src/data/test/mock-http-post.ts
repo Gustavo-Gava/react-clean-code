@@ -1,13 +1,14 @@
-import { randUrl, randUserName, randEmail, randPassword } from '@ngneat/falso'
 import { type HttpPostParams } from '../protocols/http'
+
+import { faker } from '@faker-js/faker'
 
 export const mockPostRequest = (): HttpPostParams<any> => {
   return {
-    url: randUrl(),
+    url: faker.internet.url(),
     body: {
-      name: randUserName(),
-      email: randEmail(),
-      password: randPassword(),
+      name: faker.name,
+      email: faker.internet.email(),
+      password: faker.internet.password(),
     },
   }
 }

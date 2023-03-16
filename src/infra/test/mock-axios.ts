@@ -1,9 +1,10 @@
-import { randJSON } from '@ngneat/falso'
 import axios from 'axios'
+
+import { faker } from '@faker-js/faker'
 
 export const mockedAxiosResolvedResponse = {
   status: 200,
-  data: randJSON(),
+  data: faker.datatype.json(),
 }
 
 export const mockAxios = (): jest.Mocked<typeof axios> => {
