@@ -1,7 +1,4 @@
-import { Footer } from '@/presentation/components/Footer'
-import { LoginHeader } from '@/presentation/components/LoginHeader'
-import { Button } from '@/presentation/components/ui/Button'
-import { Input } from '@/presentation/components/ui/Input'
+import { Button, Footer, Input, LoginHeader } from '@/presentation/components'
 
 const Login = () => {
   return (
