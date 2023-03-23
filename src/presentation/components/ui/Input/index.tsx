@@ -1,6 +1,7 @@
-import { CheckCircle, WarningCircle } from '@phosphor-icons/react'
 import { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
+
+import { FiCheckCircle, FiXCircle } from 'react-icons/fi'
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   containerProps?: React.HTMLAttributes<HTMLDivElement>
@@ -28,9 +29,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           {...rest}
         />
 
-        {isValid && <CheckCircle className='text-green-500' size={22} />}
+        {isValid && <FiCheckCircle className='text-green-500' size={22} />}
 
-        {error && <WarningCircle className='text-red-500' size={22} />}
+        {error && <FiXCircle className='text-red-500' size={22} />}
       </div>
     )
   }
