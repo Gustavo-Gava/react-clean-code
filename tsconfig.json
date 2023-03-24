@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["jest", "node"],
+    "types": ["jest", "node", "@testing-library/jest-dom"],
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
