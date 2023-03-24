@@ -1,6 +1,6 @@
 export function LoadingRing() {
   return (
-    <div role='status'>
+    <div role='status' aria-label='Loading'>
       <svg
         aria-hidden='true'
         className='mr-2 h-7 w-7 animate-spin fill-primary-light text-primary-dark'
