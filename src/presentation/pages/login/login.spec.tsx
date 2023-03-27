@@ -1,13 +1,17 @@
 import { screen, render } from '@testing-library/react'
 import { Login } from '@/presentation/pages'
 
+const makeSut = () => {
+  render(<Login />)
+}
+
 describe('Login Component', () => {
   test('should render Login component', () => {
-    render(<Login />)
+    makeSut()
   })
 
   test('should render Login component with correct initial state', () => {
-    render(<Login />)
+    makeSut()
     const submitButton = screen.getByRole('button', { name: 'Entrar' })
 
     expect(submitButton).toBeInTheDocument()
