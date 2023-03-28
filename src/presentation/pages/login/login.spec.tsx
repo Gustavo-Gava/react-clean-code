@@ -5,10 +5,12 @@ import { type Validation } from '@/presentation/protocols/validation'
 
 class ValidationSpy implements Validation {
   errorMessage: string = ''
-  input: object = {}
+  fieldName: string = ''
+  fieldValue: string = ''
 
-  validate(input: object) {
-    this.input = input
+  validate(fieldName: string, fieldValue: string) {
+    this.fieldName = fieldName
+    this.fieldValue = fieldValue
     return this.errorMessage
   }
 }
@@ -35,16 +37,18 @@ describe('Login Component', () => {
     expect(submitButton).toBeInTheDocument()
   })
 
-  test('should call Validation with correct value', async () => {
+  test('should call Validation with correct values', async () => {
     const { validationSpy } = makeSut()
 
     const emailInput = screen.getByRole('textbox', { name: 'email' })
     await userEvent.type(emailInput, 'email')
-    expect(validationSpy.input).toEqual({ email: 'email' })
+    expect(validationSpy.fieldName).toEqual('email')
+    expect(validationSpy.fieldValue).toEqual('email')
 
     const passwordInput = screen.getByTitle('password')
     await userEvent.type(passwordInput, 'password')
-    expect(validationSpy.input).toEqual({ password: 'password' })
+    expect(validationSpy.fieldName).toEqual('password')
+    expect(validationSpy.fieldValue).toEqual('password')
   })
 
   test('should have the correct values typed by the user', async () => {

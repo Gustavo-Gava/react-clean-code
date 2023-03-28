@@ -37,7 +37,7 @@ const Login = ({ validation }: Props) => {
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target
-    const errorMessage = validation?.validate({ [name]: value })
+    const errorMessage = validation?.validate(name, value)
     const hasError = !(errorMessage !== null)
 
     // setFormState({
