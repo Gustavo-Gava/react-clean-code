@@ -1,19 +1,7 @@
 import { screen, render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Login } from '@/presentation/pages'
-import { type Validation } from '@/presentation/protocols/validation'
-
-class ValidationSpy implements Validation {
-  errorMessage: string = ''
-  fieldName: string = ''
-  fieldValue: string = ''
-
-  validate(fieldName: string, fieldValue: string) {
-    this.fieldName = fieldName
-    this.fieldValue = fieldValue
-    return this.errorMessage
-  }
-}
+import { ValidationSpy } from '@/presentation/test/mock-validation'
 
 const makeSut = () => {
   const validationSpy = new ValidationSpy()
